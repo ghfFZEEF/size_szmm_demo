@@ -1,3 +1,8 @@
+from django.http import HttpRequest, HttpResponse
 from django.shortcuts import render
 
-# Create your views here.
+def index(request: HttpRequest) -> HttpResponse:
+    context: dict[str, str] = {
+        'page_title': 'Главная страница'
+    }
+    return render(request, 'szmm/index.html', context)
