@@ -1,3 +1,6 @@
 from django.db import models
 
-# Create your models here.
+class Goods(models.Model):
+    name: models.CharField = models.CharField(max_length=30)
+    image: models.IntegerField = models.ImageField()
+    description: models.CharField = models.CharField(max_length=200)
