@@ -1,6 +1,16 @@
 {% extends 'base/base.html' %}
 
 {% block main %}
+  <header class="mb-5" style="background-image: url(https://img.freepik.com/free-vector/factory-concept-illustration_114360-5260.jpg); background-repeat: no-repeat;  background-size: cover; background-position: center;">
+    <div class="row vh-100 bg-dark bg-opacity-25 text-light">
+      <div class="my-auto col-md-6 offset-md-2">
+        <h1 class="h1">«СЗММ»</h1>
+        <p class="fs-5">Работаем с 2000 года. Помогаем развить сельское хозяйство в Сальске и ближайших районах.</p>
+        <p><a class="btn btn-lg btn-primary" href="#">Каталог товаров</a></p>
+      </div>
+    </div>
+  </header>
+
   <div class="container">
     <div class="row">
       {% for data_item in data %}
