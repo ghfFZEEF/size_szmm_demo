@@ -1,4 +1,5 @@
 from django.contrib import admin
-from .models import GoodsTypes
+from .models import GoodsType, Pulsator
 
-admin.site.register(GoodsTypes)
+admin.site.register(GoodsType)
+admin.site.register(Pulsator)

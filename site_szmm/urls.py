@@ -20,8 +20,12 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 import szmm.views
+from szmm.models import GoodsType
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', szmm.views.index)
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+for object in GoodsType.objects.all():
+    urlpatterns.append(path(f'{object.link}', szmm.views.goods, {'goods_link': object.link}))
