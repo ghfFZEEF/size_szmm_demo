@@ -3,17 +3,33 @@
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <a class="navbar-brand h1 text-primary fw-bold" href="./">СЗММ</a>
+    {% if index %}
+      <a class="navbar-brand h1 text-primary fw-bold" href="#Main">СЗММ</a>
+    {% else %}
+      <a class="navbar-brand h1 text-primary fw-bold" href="./#Main">СЗММ</a>
+    {% endif %}
     <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
       <ul class="navbar-nav mb-2 mb-lg-0 ms-auto">
         <li class="nav-item">
-          <a class="nav-link fw-bold" aria-current="page" href="./">Главная</a>
+            {% if index %}
+              <a class="nav-link fw-bold" aria-current="page" href="#Main">Главная</a>
+            {% else %}
+              <a class="nav-link fw-bold" aria-current="page" href="./#Main">Главная</a>
+            {% endif %}
         </li>
         <li class="nav-item">
-          <a class="nav-link fw-bold" href="#ProductСatalogue">Каталог товаров</a>
+          {% if index %}
+            <a class="nav-link fw-bold" href="#ProductСatalogue">Каталог товаров</a>
+          {% else %}
+            <a class="nav-link fw-bold" href="./#ProductСatalogue">Каталог товаров</a>
+          {% endif %}
         </li>
         <li class="nav-item">
-          <a class="nav-link fw-bold" href="#Contacts">Контакты</a>
+          {% if index %}
+            <a class="nav-link fw-bold" href="#Contacts">Контакты</a>
+          {% else %}
+            <a class="nav-link fw-bold" href="./#Contacts">Контакты</a>
+          {% endif %}
         </li>
       </ul>
     </div>
