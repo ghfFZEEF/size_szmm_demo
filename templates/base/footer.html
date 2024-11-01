@@ -1,19 +1,52 @@
-<footer class="bg-primary text-center text-lg-start text-light" id="Contacts">
-  <div class="container p-4">
-    <div class="row">
+<footer class="text-white text-center text-lg-start bg-primary" id="Contacts">
+  <div class="p-4">
+    <div class="row mt-4">
       <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
-        <h5 class="text-uppercase">Проблемы с сайтом</h5>
-        <p>По любым вопросам обращаться по сайту:</p>
-        <a href="tel:+79281526298" class="text-light">+7-928-152-62-98</a>
+        <h5 class="text-uppercase mb-4">О компании</h5>
+        <p>{% lorem 20 w %}</p>
+        <p>{% lorem 20 w %}</p>
+        <iframe class="" src="https://yandex.ru/map-widget/v1/?um=constructor%3Ab7ce260065b39e2656b76be3a26d59846bd7ab5b502ac74fdb98569278d6186d&amp;source=constructor" width="100%" height="500" frameborder="0"></iframe>
       </div>
-      <div class="col-lg-6 col-md-12 mb-4 mb-md-0">
-        <h5 class="text-uppercase">Сделать заказ</h5>
-        <a href="tel:+79281526298" class="text-light">+7-928-152-62-98</a>
+
+      <div class="col-lg-5 col-md-6 mb-4 mb-md-0">
+        <div class="row">
+          <div class="col">
+            <h5 class="text-uppercase mb-4 pb-1">Контакты</h5>
+            <ul class="list-unstyled">
+              <li class="mb-3">
+                <addres><a href="https://yandex.ru/maps/-/CDhWn0Zh" class="text-light">Аэродромная улица 1, Сальск</a></addres>
+              </li>
+              <li class="mb-3">
+                <address><a href="mailto:ipantonenko@mail.ru" class="text-light">ipantonenko@mail.ru</a></address>
+              </li>
+              <li class="mb-3">
+                <address><a href="tel:+89034339790" class="text-light">+8-903-433-97-90</a></address>
+              </li>
+            </ul>
+          </div>
+          <div class="col">
+            <img class="w-100" src="{{ qr_code.image_link.url }}" alt="+8-903-433-97-90">
+          </div>
+        </div>
+        <h5 class="text-uppercase mb-4">Время работы</h5>
+        <table class="table text-center text-white">
+          <tbody class="font-weight-normal">
+            <tr>
+              <td>Пн.-Пт.</td>
+              <td>С 8 утра до 16 вечера</td>
+            </tr>
+            <tr>
+              <td>Сб.-Вс.</td>
+              <td>Выходной</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </div>
   </div>
-  <div class="text-center p-3 bg-opacity-100" style="background-color: rgb(26, 95, 214);">
+
+  <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
     © 2024 Copyright:
-    <a class="text-light" href="#">Принадлежит Кириченко Р.О.</a>
+    <a class="text-white" href="#">Принадлежит Кириченко Р.О.</a>
   </div>
 </footer>
