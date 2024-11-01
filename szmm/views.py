@@ -6,9 +6,10 @@ from szmm import models
 
 
 def index(request: HttpRequest) -> HttpResponse:
-    context: dict[str, str | list] = {
+    context: dict[str, str | list | models.QrCode | bool] = {
         "page_title": "Главная страница",
         "data": models.GoodsType.objects.all(),
+        "qr_code": models.QrCode.objects.first(),
         "index": True
     }
 
@@ -16,8 +17,12 @@ def index(request: HttpRequest) -> HttpResponse:
 
 
 def goods(request: HttpRequest, goods_link: str) -> HttpResponse:
-    context: dict[str, str | list] = {
-        "pulsators": {"page_title": "Доилки", "data": models.Pulsator.objects.all(), "index": False}
+    context: dict[str, dict] = {
+        "pulsators": {"page_title": "Доилки", "data": models.Pulsator.objects.all(), }
     }
 
-    return render(request, "szmm/goods.html", context[goods_link])
+    context: dict[str, str | list | models.QrCode | bool] = context[goods_link]
+    context["qr_code"] = models.QrCode.objects.first()
+    context["index"] = False
+    
+    return render(request, "szmm/goods.html", context)

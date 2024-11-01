@@ -15,3 +15,8 @@ class Pulsator(models.Model):
     image_link_3: models.ImageField = models.ImageField(null=True, blank=True, upload_to="pulsator_images/")
     image_link_4: models.ImageField = models.ImageField(null=True, blank=True, upload_to="pulsator_images/")
     image_link_5: models.ImageField = models.ImageField(null=True, blank=True, upload_to="pulsator_images/")
+
+
+class QrCode(models.Model):
+    image_link: models.ImageField = models.ImageField(null=True, blank=True, upload_to="qr_code")
+    
