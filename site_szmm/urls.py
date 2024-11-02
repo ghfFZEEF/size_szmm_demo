@@ -27,5 +27,5 @@ urlpatterns = [
     path('', szmm.views.index)
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
-# for object in GoodsType.objects.all():
-#     urlpatterns.append(path(f'{object.link}', szmm.views.goods, {'goods_link': object.link}))
+for link in GoodsType.links:
+    urlpatterns.append(path(link[0], szmm.views.goods, {'goods_link': link[0]}))

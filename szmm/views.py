@@ -18,7 +18,14 @@ def index(request: HttpRequest) -> HttpResponse:
 
 def goods(request: HttpRequest, goods_link: str) -> HttpResponse:
     context: dict[str, dict] = {
-        "pulsators": {"page_title": "Доилки", "data": models.Pulsator.objects.all(), }
+        "pulsators": {"page_title": "Доильные аппараты", "data": models.Pulsator.objects.all()},
+        "grain_crushers": {"page_title": "Зернодробилки", "data": models.Pulsator.objects.all()},
+        "grass_choppers": {"page_title": "Измельчители травы", "data": models.Pulsator.objects.all()},
+        "pulsators_accessories": {"page_title": "Комплектующие для доильных аппаратов", "data": models.Pulsator.objects.all()},
+        "grain_crushers_accessories": {"page_title": "Комплектующие/запчасти для зернодробилок", "data": models.Pulsator.objects.all()},
+        "grass_choppers_accessories": {"page_title": "Запчасти для измельчителей травы", "data": models.Pulsator.objects.all()},
+        "cultivators_accessories": {"page_title": "Комплектующие для мотоблоков и культиваторов", "data": models.Pulsator.objects.all()},
+        "Tooth_harrow_couplings": {"page_title": "Сцепки зубовых борон", "data": models.Pulsator.objects.all()}
     }
 
     context: dict[str, str | list | models.QrCode | bool] = context[goods_link]
