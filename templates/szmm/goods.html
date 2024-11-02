@@ -5,7 +5,7 @@
     <section class="py-5">
       <div class="container px-4 px-lg-5 my-5">
           <div class="row gx-4 gx-lg-5 align-items-center">
-              <div class="col-md-6"><img class="card-img-top mb-5 mb-md-0" src="{{ data.0.image_link_1.url }}" alt="#"></div>
+              <div class="col-md-6"><img class="card-img-top mb-5 mb-md-0" src="{{ data.0.image_1.url }}" alt="#"></div>
               <div class="col-md-6 text-center">
                   <h1 class="display-5 fw-bolder">Доильные аппараты</h1>
               </div>
@@ -19,7 +19,7 @@
       {% for data_item in data %}
         <div class="col-md-3">
           <div type="button" class="card mb-3 mx-auto"  data-bs-target="#readMore{{ data_item.id }}" data-bs-toggle="modal" style="max-width: 80vw;">
-            <img class="card-img-top" src="{{ data_item.image_link_1.url }}" alt="Доилка" style="max-height: 280px;">
+            <img class="card-img-top" src="{{ data_item.image_1.url }}" alt="Доилка" style="max-height: 280px;">
             <div class="card-body text-center">
               <h5 class="card-title">{{ data_item.name }}</h5>
               <button class="btn btn-primary">Подробнее</button>
@@ -39,36 +39,36 @@
               <div class="carousel-indicators">
                 <button type="button" data-bs-target="#carousel{{ data_item.id }}" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
                 <button type="button" data-bs-target="#carousel{{ data_item.id }}" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                {% if data_item.image_link_3.url is not None %}
+                {% if data_item.image_3.url is not None %}
                   <button type="button" data-bs-target="#carousel{{ data_item.id }}" data-bs-slide-to="2" aria-label="Slide 3"></button>
                 {% endif %}
-                {% if data_item.image_link_4.url is not None %}
+                {% if data_item.image_4.url is not None %}
                   <button type="button" data-bs-target="#carousel{{ data_item.id }}" data-bs-slide-to="3" aria-label="Slide 4"></button>
                 {% endif %}
-                {% if data_item.image_link_5.url is not None %}
+                {% if data_item.image_5.url is not None %}
                   <button type="button" data-bs-target="#carousel{{ data_item.id }}" data-bs-slide-to="4" aria-label="Slide 5"></button>
                 {% endif %}
               </div>
               <div class="carousel-inner">
                 <div class="carousel-item active">
-                  <img src="{{ data_item.image_link_1.url }}" alt="" class="w-100">
+                  <img src="{{ data_item.image_1.url }}" alt="" class="w-100">
                 </div>
                 <div class="carousel-item">
-                  <img src="{{ data_item.image_link_2.url }}" alt="" class="w-100">
+                  <img src="{{ data_item.image_2.url }}" alt="" class="w-100">
                 </div>
-                {% if data_item.image_link_3.url is not None %}
+                {% if data_item.image_3.url is not None %}
                   <div class="carousel-item">
-                    <img src="{{ data_item.image_link_3.url }}" alt="" class="w-100">
+                    <img src="{{ data_item.image_3.url }}" alt="" class="w-100">
                   </div>
                 {% endif %}
-                {% if data_item.image_link_4.url is not None %}
+                {% if data_item.image_4.url is not None %}
                   <div class="carousel-item">
-                    <img src="{{ data_item.image_link_4.url }}" alt="" class="w-100">
+                    <img src="{{ data_item.image_4.url }}" alt="" class="w-100">
                   </div>
                 {% endif %}
-                {% if data_item.image_link_5.url is not None %}
+                {% if data_item.image_5.url is not None %}
                   <div class="carousel-item">
-                    <img src="{{ data_item.image_link_5.url }}" alt="" class="w-100">
+                    <img src="{{ data_item.image_5.url }}" alt="" class="w-100">
                   </div>
                 {% endif %}
               </div>
